@@ -1,7 +1,7 @@
 .login {
     width: 100vw;
     height: 100vh;
-    background-color: #f0f2f5;
+    background-color: #000;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -22,20 +22,27 @@
   }
   
   .loginLogo {
-    font-size: 50px;
+    font-size: 80px;
     font-weight: 800;
-    color: #1775ee;
+    color: #0abb92;
     margin-bottom: 10px;
+    
   }
   
   .loginDesc {
-    font-size: 24px;
+    font-size: 26px;
+    color:#fff;
   }
   
+  .Hovering:hover{
+    font-size: 30px;
+    color:#0abb92;
+    text-decoration: underline;
+  }
   .loginBox{
       height: 400px;
       padding: 20px;
-      background-color: white;
+      background:none;
       border-radius: 10px;
       display: flex;
       flex-direction: column;
@@ -44,8 +51,8 @@
   
   .loginInput{
       height: 50px;
-      border-radius: 10px;
-      border: 1px solid gray;
+      border-radius: 30px;
+      border: 2px solid #0abb92;
       font-size: 18px;
       padding-left: 20px;
   }
@@ -56,15 +63,23 @@
   
   .loginButton{
       height: 50px;
-      border-radius: 10px;
-      border: none;
-      background-color: #1775ee;
+      border-radius: 30px;
+      border:2px solid  #1775ee;
+      background:none;
       color: white;
       font-size: 20px;
       font-weight: 500;
       cursor: pointer;
+      color:#1775ee;
+      transition: 0.7s;
   }
   
+  .loginButton:hover{
+    color:#fff;
+    background-color: #1775ee;
+  
+  }
+
   .loginForgot{
       text-align: center;
       color: #1775ee;
@@ -74,11 +89,14 @@
       width: 60%;
       align-self: center;
       height: 50px;
-      border-radius: 10px;
-      border: none;
-      background-color: #42b72a;
-      color: white;
+      border-radius: 30px;
+      border: 2px solid #0abb92;
+      background:#0abb92;
       font-size: 20px;
       font-weight: 500;
       cursor: pointer;
+      text-decoration: none;
   }
+
+
+ 

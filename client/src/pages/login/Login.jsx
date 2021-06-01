@@ -23,9 +23,9 @@ export default function Login() {
     <div className="login">
       <div className="loginWrapper">
         <div className="loginLeft">
-          <h3 className="loginLogo">Lamasocial</h3>
+          <h3 className="loginLogo">IdeaAlly</h3>
           <span className="loginDesc">
-            Connect with friends and the world around you on Lamasocial.
+            <h3 className="Hovering">Connect with people </h3><h3  className="Hovering">and the world around you</h3> <h3 className="Hovering">on IdeaAlly.</h3>
           </span>
         </div>
         <div className="loginRight">
@@ -59,7 +59,7 @@ export default function Login() {
                 "Create a New Account"
               )}
             </button> */}
-            <button className="registernew"><Link to="/register">Create a new Account</Link></button>
+            <button className="registernew"><Link to="/register" style={{ textDecoration: "none", color:"#fff"}}>Create a new Account</Link></button>
 
           </form>
         </div>

@@ -95,3 +95,20 @@
     cursor: pointer;
   }
   
+  
+.Logout{
+  background:none;
+  border: 2px solid #fff;
+  height:40px;
+  width:80px;
+  border-radius: 30px;
+  color:#fff;
+  font-weight:bold;
+  transition: 0.5s;
+}
+
+.Logout:hover{
+  background-color: #fff;
+  color:#1877f2;
+
+}

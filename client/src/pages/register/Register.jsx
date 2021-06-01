@@ -35,9 +35,9 @@ export default function Register() {
     <div className="login">
       <div className="loginWrapper">
         <div className="loginLeft">
-          <h3 className="loginLogo">Lamasocial</h3>
+          <h1 className="loginLogo">IdeaAlly</h1>
           <span className="loginDesc">
-            Connect with friends and the world around you on Lamasocial.
+            <h3 className="Hovering">Connect with people </h3><h3  className="Hovering">and the world around you</h3> <h3 className="Hovering">on IdeaAlly.</h3>
           </span>
         </div>
         <div className="loginRight">
@@ -73,7 +73,7 @@ export default function Register() {
             <button className="loginButton" type="submit">
               Sign Up
             </button>
-            <button className="loginRegisterButton"><Link to="/login">Log into Account</Link></button>
+            <button className="loginRegisterButton"><Link to="/login" style={{ textDecoration: "none" , color:"#fff"}}>Log into Account</Link></button>
           </form>
         </div>
       </div>

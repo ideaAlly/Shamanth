@@ -50,6 +50,7 @@ export default function Profile() {
             <div className="profileInfo">
               <h4 className="profileInfoName">{user.username}</h4>
               <span className="profileInfoDesc">{user.desc}</span>
+              
             </div>
           </div>
           <div className="profileRightBottom">
