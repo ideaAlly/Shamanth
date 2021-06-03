@@ -12,13 +12,27 @@ import {
 } from "@material-ui/icons";
 import { Users } from "../../dummyData";
 import CloseFriend from "../closeFriend/CloseFriend";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { useParams } from "react-router";
 
 export default function Sidebar() {
+  const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+  const [user, setUser] = useState({});
+  const username = useParams().username;
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      const res = await axios.get(`/users?username=${username}`);
+      setUser(res.data);
+    };
+    fetchUser();
+  }, [username]);
   return (
     <div className="sidebar">
       <div className="sidebarWrapper">
         <ul className="sidebarList">
-          <li className="sidebarListItem">
+          {/* <li className="sidebarListItem">
             <RssFeed className="sidebarIcon" />
             <span className="sidebarListItemText">Feed</span>
           </li>
@@ -53,15 +67,42 @@ export default function Sidebar() {
           <li className="sidebarListItem">
             <School className="sidebarIcon" />
             <span className="sidebarListItemText">Courses</span>
-          </li>
+          </li> */}
+               <div className="profileRightTop">
+            <div className="profileCoverSideBar">
+              <img
+                className="profileCoverImg"
+                src={
+                  user.coverPicture
+                    ? PF + user.coverPicture
+                    : PF + "person/noCover.png"
+                }
+                alt=""
+              />
+              <img
+                className="profileUserImg"
+                src={
+                  user.profilePicture
+                    ? PF + user.profilePicture
+                    : PF + "person/noAvatar.png"
+                }
+                alt=""
+              />
+            </div>
+            <div className="profileInfo">
+              <h4 className="profileInfoName">{user.username}</h4>
+              <span className="profileInfoDesc">{user.desc}</span>
+              
+            </div>
+          </div>
         </ul>
-        <button className="sidebarButton">Show More</button>
+        <button className="sidebarButton">Edit Profile</button>
         <hr className="sidebarHr" />
-        <ul className="sidebarFriendList">
+        {/* <ul className="sidebarFriendList">
           {Users.map((u) => (
             <CloseFriend key={u.id} user={u} />
           ))}
-        </ul>
+        </ul> */}
       </div>
     </div>
   );
