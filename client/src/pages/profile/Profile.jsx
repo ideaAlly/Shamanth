@@ -6,6 +6,7 @@ import Rightbar from "../../components/rightbar/Rightbar";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router";
+import { Email } from "@material-ui/icons";
 
 export default function Profile() {
   const PF = process.env.REACT_APP_PUBLIC_FOLDER;
@@ -18,13 +19,13 @@ export default function Profile() {
       setUser(res.data);
     };
     fetchUser();
-  }, [username]);
+  }, [username,Email]);
 
   return (
     <>
       <Topbar />
       <div className="profile">
-        <Sidebar />
+      
         <div className="profileRight">
           <div className="profileRightTop">
             <div className="profileCover">

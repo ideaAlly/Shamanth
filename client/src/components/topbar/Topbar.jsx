@@ -3,16 +3,15 @@ import { Search, Person, Chat, Notifications } from "@material-ui/icons";
 import { Link,useHistory } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
-
+import Signout from '../Signout/Signout';
+import swal from "sweetalert";
+import { withRouter } from "react-router-dom";
 
 export default function Topbar() {
   const { user } = useContext(AuthContext);
   const PF = process.env.REACT_APP_PUBLIC_FOLDER;
   const history = useHistory();
-  function logout() {
-    localStorage.clear();
-    history.push('/register');
-  }
+
   return (
     <div className="topbarContainer">
       <div className="topbarLeft">
@@ -48,7 +47,7 @@ export default function Topbar() {
             <span className="topbarIconBadge">1</span>
           </div> */}
           <div className="topbarIconItem">
-            <button className="Logout" onClick={ logout}>SignOut</button>
+           <Signout />
           </div>
          
         </div>

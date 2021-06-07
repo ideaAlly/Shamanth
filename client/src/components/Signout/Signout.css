@@ -1,0 +1,14 @@
+.SignOut{
+    background:none;
+    height: 35px;
+    width:70px;
+    border:2px solid white;
+    color:white;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+.SignOut:hover{
+    background-color: #fff;
+    color:#0abb92;
+    font-weight: bold;
+}

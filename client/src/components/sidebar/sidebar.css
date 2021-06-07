@@ -1,68 +1,44 @@
-.sidebar {
-    flex: 3;
-    height: calc(100vh - 50px);
-    overflow-y: scroll;
-    position: sticky;
-    top: 50px;
-  }
-  
-  ::-webkit-scrollbar {
-    width: 5px;
-  }
-  ::-webkit-scrollbar-track {
-    background-color: #f1f1f1;
-  }
-  ::-webkit-scrollbar-thumb {
-    background-color: rgb(179, 179, 179);
-  }
-  
-  .sidebarWrapper {
-    padding: 20px;
-  }
-  
-  .sidebarList {
-    padding: 10px 10px;
-    margin-bottom: 5px;
-    list-style: none;
-    background-color: rgb(37, 37, 37);
-    border-radius: 10px;
-    height: 500px;
-    
-  }
-  
-  .sidebarListItem {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    height: max-content;
-  }
-  
-  .sidebarIcon {
-    margin-right: 15px;
-  }
-  
-  .sidebarButton {
-    width: 150px;
-    border: none;
-    padding: 10px;
-    border-radius: 30px;
-    font-weight: 500;
-    background: none;
-    color:#fff;
-    border: 2px solid #0abb92;
-  }
-  
-  .sidebarHr {
-    margin: 20px 0;
-  }
-  
-  .sidebarFriendList {
-    padding:10px 10px ;
-    margin: 0;
-    list-style: none;
-    background-color: rgb(37, 37, 37);
-    border-radius: 10px;
-  }
+.Container{
+  width:300px;
+  height: 300px;
+  background-color: aliceblue;
+  margin: 10px 0px 10px 15px;
+  border-radius: 10px;
+  color: #000;
+}
+.Head{
+ position: relative;
+ left:100px;
+ top:20px;
+}
+.DetailsPart{
+ position: relative;
+ top:50px;
+ left:40px;
+}
+.List{
+  list-style: none;
+}
+.ListItems{
+  padding:10px;
+  font-size: large;
+}
 
-  
-  
+.EditProfile{
+  height:30px;
+  width:100px;
+  background:none;
+  color:#0abb92;
+  border-radius: 30px;
+  border:2px solid #0abb92;
+  font-weight: bold;
+  position: relative;
+  left:50px;
+  top:10px;
+  transition: 0.5s;
+}
+.EditProfile:hover{
+  background-color: #0abb92;
+  color:#fff;
+  font-weight:bold;
+}

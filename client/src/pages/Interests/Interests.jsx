@@ -1,24 +1,15 @@
 import './Interests.css';
-
+import { Link } from "react-router-dom";
 
 function Interests() {
 	var Selected = [];
-	var Saved = false;
-	//Function for the Save button goes here!!!
-	/* 
-		function Save(){
-			Update the selected array to the back-end;
-			Make the Saved Variable as true;
-		}	
-	*/
-	if (Saved == true) {
-		//Function for the Next button goes here!!!
-		/*
-			function Next(){
-				Link the href to the main page;
-			}
-		*/
-	}
+
+	// function Next() {
+	// 	if (!(Object.keys(Selected).length == 0)) {
+	// 		<Link to="/login">Next</Link>
+	// 	}
+	// }
+
 	function ClickMe(BtnName) {
 		var Button = document.getElementById(BtnName);
 		if (Button.State == "0") {
@@ -252,7 +243,7 @@ function Interests() {
 				</div>
 			</div>
 			<div className="Buttons">
-					<button className="Submit">Next</button>
+				<button className="Submit" ><Link to="/login">Next</Link></button>
 			</div>
 		</div>
 	);

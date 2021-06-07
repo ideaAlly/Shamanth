@@ -71,7 +71,7 @@ export default function Register() {
               type="password"
             />
             <button className="loginButton" type="submit">
-              Sign Up
+              <Link to="/Interests" >Sign Up</Link>
             </button>
             <button className="loginRegisterButton"><Link to="/login" style={{ textDecoration: "none" , color:"#fff"}}>Log into Account</Link></button>
           </form>
