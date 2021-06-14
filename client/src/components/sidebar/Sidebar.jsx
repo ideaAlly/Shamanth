@@ -25,7 +25,7 @@ export default function Sidebar() {
         <div className="Head"><h3>Your Details</h3></div>
         <div className="DetailsPart">
           <ul className="List">
-            <li className="ListItems">userame : </li>
+            <li className="ListItems">username : </li>
             <li className="ListItems">Email : </li>
             <li className="ListItems">Interests :</li>
             <li className="ListItems">Bio : </li>

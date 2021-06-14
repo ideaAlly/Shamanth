@@ -2,7 +2,6 @@ import Home from "./pages/home/Home";
 import Login from "./pages/login/Login";
 import Profile from "./pages/profile/Profile";
 import Register from "./pages/register/Register";
-import Interests from "./pages/Interests/Interests";
 import {
   BrowserRouter as Router,
   Switch,
@@ -23,10 +22,7 @@ function App() {
         </Route>
         <Route path="/login">{user ? <Redirect to="/" /> : <Login />}</Route>
         <Route path="/register">
-          {user ? <Redirect to="/Interests" /> : <Register />}
-        </Route>
-        <Route path="/Interests">
-        { user ? <Redirect to="/login" /> : <Interests />}
+          {user ? <Redirect to="/" /> : <Register />}
         </Route>
         <Route path="/messenger">
           {!user ? <Redirect to="/" /> : <Messenger />}

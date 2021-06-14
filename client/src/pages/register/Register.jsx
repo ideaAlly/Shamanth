@@ -1,9 +1,9 @@
 import axios from "axios";
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import { Multiselect } from 'multiselect-react-dropdown';
 import "./register.css";
 import { useHistory } from "react-router";
 import { Link } from "react-router-dom";
-
 
 export default function Register() {
   const username = useRef();
@@ -31,13 +31,27 @@ export default function Register() {
     }
   };
 
+  const data = [
+    { Stack: 'Artificial Intelligence', id: 1},
+    { Stack: 'Web development', id: 2},
+    { Stack: 'Machine Learning', id: 3},
+    { Stack: 'Natural Language Processing', id: 4},
+    { Stack: 'Deep Learning', id: 5},
+    { Stack: 'Robotics', id: 6}
+
+  ]
+  const[options] = useState(data);
+
+
   return (
     <div className="login">
       <div className="loginWrapper">
         <div className="loginLeft">
           <h1 className="loginLogo">IdeaAlly</h1>
           <span className="loginDesc">
-            <h3 className="Hovering">Connect with people </h3><h3  className="Hovering">and the world around you</h3> <h3 className="Hovering">on IdeaAlly.</h3>
+            <h3 className="Hovering">Connect with people </h3>
+            <h3 className="Hovering">and the world around you</h3>{" "}
+            <h3 className="Hovering">on IdeaAlly.</h3>
           </span>
         </div>
         <div className="loginRight">
@@ -70,11 +84,17 @@ export default function Register() {
               className="loginInput"
               type="password"
             />
+          <div className="Interests">
+              <Multiselect options={options} displayValue="Stack"/>
+            </div>
+
             <button className="loginButton" type="submit">
-              <Link to="/Interests" >Sign Up</Link>
+              <Link to="/login">Sign Up</Link>
             </button>
-            <button className="loginRegisterButton"><Link to="/login" style={{ textDecoration: "none" , color:"#fff"}}>Log into Account</Link></button>
+            <button className="loginRegisterButton"><Link to="/login">Log into Account</Link></button>
+
           </form>
+
         </div>
       </div>
     </div>
